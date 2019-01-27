@@ -198,7 +198,9 @@ scoreboard:
   show-proximity: false
   precise-progress: false
   show-ip: true
-
+tab:
+  server-name: SRV
+  server-ip: IP
 wool:
   auto-refill: true
 

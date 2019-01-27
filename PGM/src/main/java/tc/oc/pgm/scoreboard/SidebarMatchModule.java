@@ -476,7 +476,7 @@ public class SidebarMatchModule extends MatchModule implements Listener {
 
             if(Config.Scoreboard.showIp()) {
                 rows.add("");
-                rows.add(ChatColor.AQUA + minecraftService.getLocalServer().domain());
+                rows.add(ChatColor.AQUA + "www.braehmc.net");
             }
 
             // Need at least one row for the sidebar to show

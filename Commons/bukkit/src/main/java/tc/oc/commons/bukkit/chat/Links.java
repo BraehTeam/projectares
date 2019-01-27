@@ -12,8 +12,8 @@ import tc.oc.commons.core.util.ExceptionUtils;
 public class Links {
     private Links() {}
 
-    public static final String HOST = "stratus.network";
-    public static final String SHOP_HOST = "stratusnetwork.buycraft.net";
+    public static final String HOST = "braehmc.net";
+    public static final String SHOP_HOST = "braehmc.net/donate";
 
     public static URI homeUri(String path) throws URISyntaxException {
         return new URI("http", HOST, path, null);

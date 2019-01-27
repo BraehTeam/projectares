@@ -66,16 +66,21 @@ public class MatchFooterTabEntry extends DynamicTabEntry {
         String server = Config.PlayerList.server();
 
         if(domain != null) {
-            content.extra(new Component(domain, ChatColor.WHITE, ChatColor.BOLD),
-                          new Component(" - "));
+            content.extra(new Component(Config.getConfiguration().getString("tab.server-ip"), ChatColor.WHITE, ChatColor.BOLD),
+                    new Component(" - "));
         }
 
         content.extra(new Component(PGMTranslations.get().t("command.match.matchInfo.time", view.getViewer()) + ": ", ChatColor.GRAY),
-                      new Component(PeriodFormats.formatColons(this.match.runningTime()), this.match.isRunning() ? ChatColor.GREEN : ChatColor.GOLD));
+                new Component(PeriodFormats.formatColons(this.match.runningTime()), this.match.isRunning() ? ChatColor.GREEN : ChatColor.GOLD));
+
+
+        content.extra(new Component(" - "),
+                new Component(Config.getConfiguration().getString("tab.server-name"), ChatColor.WHITE, ChatColor.BOLD));
+
 
         if(server != null) {
             content.extra(new Component(" - "),
-                          new Component(server, ChatColor.WHITE, ChatColor.BOLD));
+                    new Component(server, ChatColor.WHITE, ChatColor.BOLD));
         }
 
         return content;
